@@ -123,6 +123,7 @@ sh 'docker-compose up -d'
 Although the pipeline was succesfully runned but faced some issues on ending 
 Due to time constraints, I regret that I was not able to complete the project in a fully professional manner.
 here are the screenshots:
+![image alt](image_url)https://github.com/aswanth5631/crud-dd-task-mean-app/blob/45ead94b6cad0dad9b2596f9f590c7c6b2ae3a9a/PHOTO-2026-02-24-18-16-52.jpg
 
 
 
