@@ -118,6 +118,7 @@ sh 'docker-compose up -d'
 }
 }
 }
+
 14. (faced some errors and succusfulling debugged the pipeline till deployment
 Although the pipeline was succesfully runned but faced some issues on ending 
 Due to time constraints, I regret that I was not able to complete the project in a fully professional manner.
