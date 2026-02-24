@@ -10,7 +10,8 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/aswanth5631/crud-dd-task-mean-app.git'
+                git branch: 'main',
+                    url 'https://github.com/aswanth5631/crud-dd-task-mean-app.git'
             }
         }
 
