@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:6
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: .
+    container_name: mean-backend
+    ports:
+      - "5000:8080"   # maps EC2 port 5000 to container port 8080
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mean_db
+    depends_on:
+      - mongo
+    networks:
+      - mean-network
+
+volumes:
+  mongo-data:
+
+networks:
+  mean-network:

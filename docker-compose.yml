@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+
+  backend:
+    image: aswanth5631/mean-backend:latest
+    container_name: mean_backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/mean_db
+
+  frontend:
+    image: aswanth5631/mean-frontend:latest
+    container_name: mean_frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
